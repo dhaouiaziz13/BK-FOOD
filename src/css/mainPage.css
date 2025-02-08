@@ -1,0 +1,187 @@
+/* Container Styles */
+.main-page-container {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  max-height: 98vh;
+}
+
+.video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.692), rgba(255, 255, 255, 0));
+  z-index: 1;
+}
+
+.content-container {
+  z-index: 1;
+  width: 100%;
+  height: 97vh;
+}
+
+.content {
+  display: flex;
+}
+
+/* Image Container Styles */
+.mid-image-container {
+  position: relative;
+  width: 60%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid-image-container .image {
+  position: absolute;
+  width: 55%;
+  height: auto;
+  object-fit: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image1 {
+  z-index: 1;
+}
+
+.image2 {
+  z-index: 2;
+  transition: transform 1s;
+}
+
+.image2:hover {
+  transform: translate(-60%, -50%);
+}
+
+/* Text Container Styles */
+.text-container {
+  width: 40%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0px;
+}
+
+.coming-soon-section {
+  display: flex;
+  align-items: center;
+}
+
+.redline {
+  width: 50px;
+  height: 2px;
+  margin: 20px 10px 20px 0;
+  background-color: red;
+}
+
+.coming-soon-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: red;
+}
+
+.sub-text {
+  font-size: 40px;
+  margin-left: 50px;
+  font-weight: 500;
+  max-width: 600px;
+  color: #0E2639;
+}
+
+
+/* ================================ */
+/*       Responsive Media Queries   */
+/* ================================ */
+
+@media (max-width: 768px) {
+  /* Adjust the main container so that content starts at the top */
+  .main-page-container {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  
+  /* Stack content vertically and allow items to take full width */
+  .content {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 25%;
+  }
+  .mid-image-container{
+    margin-top: 20%;
+  }
+  /* Make both image and text containers full width with auto height */
+  .mid-image-container,
+  .text-container {
+    width: 100%;
+    height: 20vh;
+  }
+  
+  /* For the text container, remove centering and align text to the left */
+  .text-container {
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Adjust typography for smaller screens */
+  .sub-text {
+    margin-left: 0;
+    font-size: 32px;
+  }
+  
+  .coming-soon-text {
+    font-size: 18px;
+  }
+  
+  .redline {
+    width: 40px;
+    margin: 15px 10px 15px 0;
+  }
+  .video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 110vh;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .sub-text {
+    font-size: 28px;
+  }
+  
+  .coming-soon-text {
+    font-size: 16px;
+  }
+  
+  .redline {
+    width: 30px;
+    margin: 10px 5px 10px 0;
+  }
+}

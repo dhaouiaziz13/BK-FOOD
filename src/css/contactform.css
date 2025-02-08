@@ -1,0 +1,205 @@
+/* Existing CSS code */
+
+.overlay-contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0)
+  );
+  z-index: 1;
+}
+.form-container {
+  /* border: 1px solid red; */
+  height: 85vh;
+  display: flex;
+}
+.contact-form-slogan {
+  display: flex;
+  justify-content: center;
+  writing-mode: vertical-lr;
+  font-size: 45px;
+  color: #0e2639;
+  font-weight: bold;
+  transform: rotate(180deg);
+}
+.form-body-container {
+  text-align: center;
+  /* border: 1px solid blue; */
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.form-body-slogan-title {
+  font-size: 40px;
+  color: #0e2639;
+  font-weight: bold;
+}
+.form-body-slogan-subtitle {
+  font-size: 25px;
+  color: red;
+  font-weight: bold;
+}
+.contact-img {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  bottom: 50px;
+  right: 50px;
+}
+
+.mailsent-msg-container {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mailsent-msg-title {
+  font-size: 40px;
+  color: #0e2639;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.mailsent-msg-paragraph {
+  text-align: center;
+  font-size: 24px;
+  color: #0e2639;
+  background-color: white;
+  width: 839px;
+  height: 20vh;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+/* Media Queries for phone screens */
+@media (max-width: 600px) {
+  .form-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .form-body-container {
+    margin-top: 10%;
+  }
+  .contact-form-slogan {
+    display: none;
+  }
+  .form-body-slogan-title {
+    font-size: 24px;
+  }
+  .form-body-slogan-subtitle {
+    font-size: 18px;
+  }
+  .contact-img {
+    display: none;
+  }
+  .mailsent-msg-paragraph {
+    width: 90%;
+    height: auto;
+    font-size: 18px;
+  }
+  .overlay-contact {
+    display: none;
+  
+  }
+}
+
+/* form styles */
+
+/* Container for centering the form */
+.formContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Form styling */
+.form {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  width: 500px;
+  max-width: 800px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Input group spacing */
+.inputGroup {
+  margin-bottom: 15px;
+}
+
+/* Input and textarea styling */
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #0e2639;
+}
+
+/* Specific styling for the textarea */
+.textarea {
+  height: 50px;
+  resize: vertical;
+}
+
+/* Button container to align the button */
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+/* Button styling */
+.button {
+  background-color: #0e2639;
+  color: #ffffff;
+  padding: 12px 40px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #1a3652;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .formContainer {
+    padding: 10px;
+  }
+
+  .form {
+    padding: 15px;
+    width: 350px;
+  }
+
+  .input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

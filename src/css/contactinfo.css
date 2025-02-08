@@ -1,0 +1,264 @@
+/* ========== Base Styles ========== */
+
+.main-page-container-continfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 98vh;
+  
+}
+.con-info-container {
+  height: 78vh;
+  display: flex;
+}
+.video-bg-continfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay-continfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.692),
+    rgba(255, 255, 255, 0)
+  );
+  z-index: 1;
+}
+.con-info-container .cont-info-slogan {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100px;
+  writing-mode: vertical-lr;
+  font-size: 45px;
+  color: #0e2639;
+  font-weight: bold;
+  transform: rotate(180deg);
+}
+
+.cards-cont {
+  width: 100%;
+  display: flex;
+  margin-left: 50px;
+}
+
+.triple-card-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  max-width: 30%;
+}
+
+.cards {
+  cursor: pointer;
+  height: 160px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 10px;
+  color: #0e2639;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* Modern fallback for word wrapping */
+  overflow-wrap: break-word;
+}
+
+.card-active {
+  cursor: pointer;
+  height: 160px;
+  width: 100%;
+  background-color: #0e2639;
+  color: white !important;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-wrap: break-word;
+}
+
+.card-title {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+.card-sub-title,
+.card-address,
+.phone,
+.fax,
+.email {
+  font-size: 13px;
+  white-space: normal;
+  /* Modern property for wrapping long words */
+  overflow-wrap: break-word;
+}
+
+.card-sub-title {
+  font-weight: bold;
+}
+
+.map {
+  width: 60%;
+  height: 95%;
+  margin-left: 40px;
+}
+
+.contact-footer {
+  height: 8vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.gobackhomepage {
+  color: #0e2639;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 30px;
+}
+
+.backarrow {
+  border: 3px solid #0e2639;
+  border-radius: 50%;
+  width: 40px;
+  font-size: 30px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.backarrow:hover {
+  background-color: #0e2639be;
+  color: white;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+/* ========== Responsive Media Queries ========== */
+
+@media (max-width: 768px) {
+  .backarrow {
+    width: 30px;
+    height: 35px;
+    font-size: 24px;
+    
+  }
+  .contact-footer {
+    display: none;
+  }
+  /* Instead of collapsing the container, we set a minimum height so content stays visible */
+  .con-info-container {
+    flex-direction: column;
+    min-height: 78vh;
+    padding: 20px 0;
+  }
+  .video-bg-continfo {
+    height: 170vh;
+  }
+  .overlay-continfo {
+    display: none;
+  }
+
+  /* Adjust the vertical slogan */
+  .con-info-container .cont-info-slogan {
+    display: none;
+  }
+
+  /* Stack cards container vertically and remove left margin */
+  .cards-cont {
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  /* Increase the width of each triple card container for better visibility */
+  .triple-card-cont {
+    width: 80%;
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  /* Let cards adjust their height to content and reduce padding and font size */
+  .cards,
+  .card-active {
+    height: auto;
+    padding: 8px;
+    font-size: 12px;
+    white-space: normal; /* Allow wrapping */
+  }
+
+  /* Make the map container full width and adjust margins */
+  .map {
+    width: 300px;
+    height: 40vh;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  /* Stack footer content vertically */
+  .contact-footer {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .gobackhomepage {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .backarrow {
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .con-info-container .cont-info-slogan {
+    font-size: 30px;
+    width: 80px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-sub-title,
+  .card-address,
+  .phone,
+  .fax,
+  .email {
+    font-size: 11px;
+  }
+}
