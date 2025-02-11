@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../css/contactform.css"; // Import the external stylesheet
-import WhatsAppButton from "./WhatsAppBtn";
+import FooterWhatsApp from "./FooterWhatsApp";
 const ContactForm = ({ setIsMailSent }) => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -103,7 +103,7 @@ const ContactForm = ({ setIsMailSent }) => {
         </div>
 
         <div className="buttonContainer">
-          <WhatsAppButton />
+          <FooterWhatsApp />
           <button type="submit" className="button">
             Send
           </button>

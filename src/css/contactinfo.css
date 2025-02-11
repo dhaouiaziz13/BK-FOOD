@@ -202,7 +202,7 @@
   .triple-card-cont {
     width: 80%;
     max-width: 80%;
-    margin-bottom: 20px;
+    margin-bottom:5px;
   }
 
   /* Let cards adjust their height to content and reduce padding and font size */
@@ -216,10 +216,10 @@
 
   /* Make the map container full width and adjust margins */
   .map {
-    width: 300px;
+    width: 360px;
     height: 40vh;
     margin-left: 0;
-    margin-top: 20px;
+    
   }
 
   /* Stack footer content vertically */
